@@ -19,13 +19,13 @@ def predict_point():
         render_template('index.html')
     else:
         # Load the le pickle files
-        with open('notebook/LabelEnc.pkl','rb') as file1:
+        with open('Notebook/LabelEnc.pkl','rb') as file1:
             le = pickle.load(file1)
         # Load the Scaler file
-        with open('notebook/Scaler.pkl','rb') as file2:
+        with open('Notebook/Scaler.pkl','rb') as file2:
             scaler = pickle.load(file2)
         # Load the model
-        with open('notebook/model.pkl','rb') as file3:
+        with open('Notebook/model.pkl','rb') as file3:
             model = pickle.load(file3)
         # Read all the values
         sep_len = float(request.form.get('sepal_length'))
